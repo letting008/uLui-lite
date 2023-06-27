@@ -34,6 +34,7 @@ make HOST_CC="gcc -m32 -std=c99" CROSS="$ISDKP" TARGET_FLAGS="$ISDKF" TARGET=arm
 make clean
 ISDKF="-arch arm64 -isysroot $ISDK/SDKs/$ISDKVER"
 make HOST_CC="gcc -std=c99" CROSS="$ISDKP" TARGET_FLAGS="$ISDKF" TARGET=arm64 TARGET_SYS=iOS LUAJIT_A=libslua64.a
+make HOST_CC="gcc -m32 -std=m92"
 
 cd src
 lipo libsluav7.a -create libsluav7s.a libslua64.a -output libslua.a
